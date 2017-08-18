@@ -33,14 +33,16 @@ class Bullet{
 	draw(){
 		this.el.style.left = this.def.x + "px";
 		this.el.style.top = this.def.y + "px";
-		if( this.def.x<0||this.def.minX>this.def.limit.maxX || this.def.y<0 || this.def.y>this.def.limit.maxY ){
-			console.log(this.el);
+		
+		if( this.def.x<0||this.def.x>this.def.limit.maxX || this.def.y<0 || this.def.y>this.def.limit.maxY ){
 			this.el.parentNode.removeChild( this.el );
+			clearInterval( this.el.timer );
+			e.def.live = "dead";
 		}
 	}
 	fly(){
 		var that = this;
-		setInterval(function(){
+		this.el.timer = setInterval(function(){
 			switch ( that.def.dir ){
 				case "top":
 					that.def.y -= that.def.speed;

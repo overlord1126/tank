@@ -1,6 +1,6 @@
 .tank{
 	position: absolute;
-	font: 25px/2 "微软雅黑";
+	font: 16px/50px "微软雅黑";
 	color: #fff;
 }
 #box{
@@ -8,6 +8,7 @@
 	height:500px;
 	border: 1px solid #000;
 	position: relative;
+	margin: 10px auto;
 }
 .bullet{
 	position: absolute;

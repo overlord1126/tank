@@ -6,6 +6,8 @@
 //			speed:10 速度
 //			dirMap: ["top","right","bottom","left"] 可能出现的方向
 //			dir:"top", 当前方向
+//			live:true,是否活着
+			
 //			bgColor:"red", 颜色
 //			isMoving:false ,可以移动
 //			canShow: 是否可以射击
@@ -17,6 +19,10 @@ class Tank {
 			h: 50,
 			x: 100,
 			y: 600,
+			live: true,
+			set live (val){
+				alert(val);
+			},
 			dirMap: ["top","right","bottom","left"],
 			dir: "top",
 			bgColor: "red",
@@ -61,6 +67,7 @@ class Tank {
 			x:this.def.x+20,
 			y:this.def.y+20,
 			dir:this.def.dir,
+//			dir:"right",
 		})
 		b.init();
 	}
