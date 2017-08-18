@@ -1,0 +1,21 @@
+.tank{
+	position: absolute;
+	font: 25px/2 "微软雅黑";
+	color: #fff;
+}
+#box{
+	width:500px;
+	height:500px;
+	border: 1px solid #000;
+	position: relative;
+}
+.bullet{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: #f00;
+}
+.bullet-e{
+	background-color: #000;
+}

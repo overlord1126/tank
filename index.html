@@ -3,8 +3,27 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
 	</head>
 	<body>
 		<div id="box"></div>
+		<script src="tank.js"></script>
+		<script src="enemy.js"></script>
+		<script src="hero.js"></script>
+		<script src="bullet.js"></script>
+		<script>
+			var t = new Hero({
+				bgColor:"green",
+				isMoving:false,
+				x:0,
+				y:450,
+			});
+			t.init();
+			var e = new Enemy({
+				x:40,
+				y:40,
+			});
+			e.init();
+		</script>
 	</body>
 </html>
