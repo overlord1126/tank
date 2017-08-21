@@ -9,6 +9,17 @@ class Hero extends Tank {
 		this.loadAndFire();//按下j可发射
 		this.switchDir();//移动作用
 	}
+	reborn(){
+		var t = new Hero({
+			bgColor:"green",
+			isMoving:false,
+			x:0,
+			type:1,
+			y:450,
+		});
+		t.init();
+		game.hero = t ;
+	}
 	switchDir(){
 		var that = this;
 		document.addEventListener("keydown",function(ev){
@@ -43,7 +54,7 @@ class Hero extends Tank {
 		var that = this;
 		document.addEventListener("keydown",function(ev){
 			if(ev.keyCode == 74){//按下j
-				that.shot();
+				that.shot(that.def.type);
 			}
 		})
 	}

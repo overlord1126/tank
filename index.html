@@ -12,19 +12,57 @@
 		<script src="hero.js"></script>
 		<script src="bullet.js"></script>
 		<script>
+			var game = {
+				bulletE:[],//敌人的子弹
+				bulletH:[],//我方的子弹
+				enemy:[],
+				hero:[],
+				check(a,b){
+					if( a.x > b.x+b.w || a.x+a.w < b.x || a.y > b.y+b.h || a.y+a.h < b.y ){
+//						console.log("没有碰撞");
+					}else{
+//						console.log("碰撞");
+//						console.log( a,b );
+						a.shengming-=1;
+						b.shengming-=1;
+					}
+//					console.log( "check" )
+				}
+			}
 			var t = new Hero({
 				bgColor:"green",
 				isMoving:false,
 				x:0,
+				type:1,
 				y:450,
 			});
 			t.init();
-			var e = new Enemy({
+			var e1 = new Enemy({
 				bgColor:"blue",
-				x:40,
-				y:40,
+				x:0,
+				y:0,
+				dir:"bottom",
+				isMoving:false,
 			});
-			e.init();
+			e1.init();
+//			var e2 = new Enemy({
+//				bgColor:"blue",
+//				x:200,
+//				y:200,
+//			});
+//			e2.init();
+//			var e3 = new Enemy({
+//				bgColor:"blue",
+//				x:400,
+//				y:400,
+//			});
+//			e3.init();
+			
+			
+			game.hero = t ;
+			game.enemy.push( e1 );
+//			game.enemy.push( e2 );
+//			game.enemy.push( e3 );
 		</script>
 	</body>
 </html>

@@ -14,14 +14,14 @@ class Enemy extends Tank {
 	autoFire(){
 		var that = this;
 		setTimeout(function(){
-			that.shot();
+			that.shot(that.def.type);
 			that.autoFire();	
 		},Math.random()*2000+2000)
 	}
 	init(){
 		this.creatDiv();//创建
 		this.move();//执行移动
-		this.mad();
+//		this.mad();
 		this.autoFire();//发射子弹
 	}
 }

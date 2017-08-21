@@ -2,6 +2,8 @@
 	position: absolute;
 	font: 16px/50px "微软雅黑";
 	color: #fff;
+	left: 0px;
+	top: 0px;
 }
 #box{
 	width:500px;
@@ -12,6 +14,8 @@
 }
 .bullet{
 	position: absolute;
+	left: 0px;
+	top: 0px;
 	width: 10px;
 	height: 10px;
 	border-radius: 10px;
